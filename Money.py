@@ -7,4 +7,10 @@ def hm_money():
     ppl_prc = int(input("Please enter the amount of apple you want to buy: "))
     return mmnt_money, ppl_prc
 
+def result(Money, PriceApple):
+    max_apple = Money // PriceApple
+    change = Money  % PriceApple
+    return max_apple, change
+
+
 
