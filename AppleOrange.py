@@ -1,7 +1,9 @@
 def pricelist():
+
     pple_price = 20
     rng_price = 25
     print(f"Our orange costs {rng_price} pesos and for our apple, it will only cost you {pple_price} pesos.")
+    return pple_price, rng_price
 
 def hmany():
     ppl_hmany = int(input("How many apples do you want? "))
@@ -19,11 +21,11 @@ def display(calculate):
 
 # 
 # pricelist
-ApplePrice, OrangePrice = pricelist()
+applePrice, orangePrice = pricelist()
 # how many
 apple, orange = hmany()
 # calculte
-calculate = cal_(pple_price, rng_price, apple, orange)
+calculate = cal_(applePrice, orangePrice, apple, orange)
 # output
 display(calculate)
 
