@@ -8,5 +8,19 @@ def hmany():
     rng_hmany = int(input("How many orange do you want? "))
     return ppl_hmany, rng_hmany
 
+def cal_(pple_price, rng_price, ppl_hmany, rng_hmany):
+    ppl_ttl = pple_price * ppl_hmany
+    rng_ttl = rng_price * rng_hmany
+    cal_ = ppl_ttl + rng_ttl
+    return cal_
+
+# 
+# pricelist
+pple_price, rng_price = pricelist()
+# how many
+apple, orange = hmany()
+# calculte
+calculate = cal_(pple_price, rng_price, apple, orange)
+# output
 
     
