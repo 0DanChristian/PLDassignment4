@@ -14,13 +14,19 @@ def cal_(pple_price, rng_price, ppl_hmany, rng_hmany):
     cal_ = ppl_ttl + rng_ttl
     return cal_
 
+def display(calculate):
+    print(f"The total amount of your purchase is {calculate} pesos. ")
+
 # 
 # pricelist
-pple_price, rng_price = pricelist()
+ApplePrice, OrangePrice = pricelist()
 # how many
 apple, orange = hmany()
 # calculte
 calculate = cal_(pple_price, rng_price, apple, orange)
 # output
+display(calculate)
+
+
 
     
