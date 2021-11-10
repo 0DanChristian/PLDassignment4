@@ -12,5 +12,8 @@ def result(Money, PriceApple):
     change = Money  % PriceApple
     return max_apple, change
 
+def output(max_apple, change):
+    print(f"You can have {max_apple} apples and your change will be {change} pesos, thank you!.")
+
 
 
