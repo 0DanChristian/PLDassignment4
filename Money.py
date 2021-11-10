@@ -15,5 +15,10 @@ def result(Money, PriceApple):
 def output(max_apple, change):
     print(f"You can have {max_apple} apples and your change will be {change} pesos, thank you!.")
 
+Money, PriceApple = hm_money()
+
+max_apple, change = result(Money, PriceApple)
+
+output(max_apple, change)
 
 
