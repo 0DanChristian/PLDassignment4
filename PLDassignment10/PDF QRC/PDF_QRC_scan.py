@@ -45,3 +45,16 @@ while QR_scanner == True:
             file.write(f'Scanned QR Code redirecting to {read} recorded at %s.\n' % 
                (datetime.datetime.now()))
         break
+    
+    for scanned_QR in decode(img):
+        text = scanned_QR.data.decode('utf-8')
+        print(text)
+
+        # record
+        with open("record_of_scans.txt", mode='a') as file:
+            file.write(f'Scanned QR Code containing {text} was recorded at %s.\n' % 
+            (datetime.datetime.now())) 
+            capture_vid.release(text)
+            cv2.destroyAllWindows
+        break
+
