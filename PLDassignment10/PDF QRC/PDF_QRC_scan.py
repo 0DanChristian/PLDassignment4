@@ -24,3 +24,11 @@ import webbrowser
 import numpy as np
 
 
+# capture vid
+capture_vid = cv2.VideoCapture(0)
+detector = cv2.QRCodeDetector()
+
+# generate qr
+img = qrcode.make('PDF_Trace.pdf')
+img.save('trace_qr.png')
+
