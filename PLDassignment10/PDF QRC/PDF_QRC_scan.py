@@ -21,7 +21,6 @@ import datetime
 from pyzbar.pyzbar import decode
 import qrcode
 import webbrowser
-import numpy as np
 
 
 # capture vid
