@@ -58,3 +58,10 @@ while QR_scanner == True:
             cv2.destroyAllWindows
         break
 
+    cv2.imshow('Dan Christian QRC Scanner', img)
+    if cv2.waitKey(1)==ord('a'):
+        break
+    
+redirect = webbrowser.open((str(read)))
+capture_vid.release(read)
+cv2.destroyAllWindows
