@@ -32,3 +32,16 @@ detector = cv2.QRCodeDetector()
 img = qrcode.make('PDF_Trace.pdf')
 img.save('trace_qr.png')
 
+# Scan
+QR_scanner = True
+
+while QR_scanner == True:
+    captured, img = capture_vid.read()
+    data, one, _ = detector.detectAndDecode(img)
+    if data:
+        read = data
+        # Record Date and Time of QR Code Detection
+        with open("record_of_scans.txt", mode='a') as file:
+            file.write(f'Scanned QR Code redirecting to {read} recorded at %s.\n' % 
+               (datetime.datetime.now()))
+        break
